@@ -44,7 +44,7 @@ function showStartScreen() {
 }
 
 
-let speed = 700;
+let speed = 7;
 let offset = 0;
 
 const backImage = new Image();
@@ -105,7 +105,7 @@ let milestoneTimer = 0;
 let particles = [];
 let wasOnGround = false;
 let difficultyTimer = 0;
-let maxSpeed = 2000;
+let maxSpeed = 20;
 
 // [NEW] Stars array for collectibles
 let stars = [];
@@ -666,7 +666,7 @@ function restartGame() {
     score = 0;
     distance = 0;
     offset = 0;
-    speed = 150;
+    speed = 7;
     milestone = 2000;
     milestoneTimer = 0;
     particles = [];
