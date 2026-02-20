@@ -44,7 +44,7 @@ function showStartScreen() {
 }
 
 
-let speed = 7;
+let speed = 50;
 let offset = 0;
 
 const backImage = new Image();
