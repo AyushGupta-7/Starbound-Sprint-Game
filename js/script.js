@@ -105,7 +105,7 @@ let milestoneTimer = 0;
 let particles = [];
 let wasOnGround = false;
 let difficultyTimer = 0;
-let maxSpeed = 12;
+let maxSpeed = 2000;
 
 // [NEW] Stars array for collectibles
 let stars = [];
