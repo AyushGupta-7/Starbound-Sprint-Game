@@ -68,7 +68,11 @@ playerStandLeft.src = "./images/spriteStandLeft.png";
 const playerRunRight = new Image();
 playerRunRight.src = "./images/spriteRunRight.png";
 
-let images = [backImage, hillsImage, plaformBase, plaformSmall, playerStandRight, playerRunRight, playerStandLeft];
+// [FIX] Added left running sprite
+const playerRunLeft = new Image();
+playerRunLeft.src = "./images/spriteRunLeft.png";
+
+let images = [backImage, hillsImage, plaformBase, plaformSmall, playerStandRight, playerRunRight, playerStandLeft, playerRunLeft];
 const totalImages = images.length;
 let gameStart = false;
 let count = 0;
@@ -250,6 +254,13 @@ class Player {
             this.frames = 0;
 
         if (this.frames > 29 && this.image == playerRunRight)
+            this.frames = 0;
+
+        // [FIX] Reset frames for left running sprite (matches playerRunRight frame count)
+        if (this.frames > 29 && this.image == playerRunLeft)
+            this.frames = 0;
+
+        if (this.frames > 59 && this.image == playerStandLeft)
             this.frames = 0;
 
         this.position.y += this.velocity.y;
@@ -536,9 +547,10 @@ function animate() {
         player.cropWidth = 340;
         player.width = 127;
     } else if (keys.left) {
-        player.image = playerStandLeft;
-        player.cropWidth = 177;
-        player.width = 66;
+        // [FIX] Use playerRunLeft sprite when running left
+        player.image = playerRunLeft;
+        player.cropWidth = 340; // match your spriteRunLeft.png frame width
+        player.width = 127;
     } else {
         player.image = playerStandRight;
         player.cropWidth = 177;
