@@ -666,7 +666,7 @@ function restartGame() {
     score = 0;
     distance = 0;
     offset = 0;
-    speed = 5;
+    speed = 50;
     milestone = 2000;
     milestoneTimer = 0;
     particles = [];
