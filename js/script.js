@@ -214,7 +214,7 @@ class Star {
         return false;
     }
 }
-
+        
 //2. Player
 class Player {
     constructor() {
